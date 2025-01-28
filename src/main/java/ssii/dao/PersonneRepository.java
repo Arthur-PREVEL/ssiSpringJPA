@@ -7,4 +7,5 @@ import ssii.entity.Personne;
 
 public interface PersonneRepository extends JpaRepository<Personne, Integer> {
 
+
 }

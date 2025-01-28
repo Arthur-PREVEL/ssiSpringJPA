@@ -1,5 +1,5 @@
 -- Initialisation des tables
-INSERT INTO Personne(matricule, nom, prenom, poste) VALUES
+INSERT INTO Personne(matricule, prenom, nom, poste) VALUES
     (1, 'Arthur', 'ELKA', 'Programmeur JAVA'),
     (2 , 'Inès', 'PREVE', 'Chef de projet'),
     (3, 'Capucine', 'SEDDA', 'Responsable logistique'),
