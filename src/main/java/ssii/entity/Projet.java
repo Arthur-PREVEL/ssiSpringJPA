@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import lombok.*;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,27 +14,20 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @ToString
-public class Personne {
+public class Projet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer matricule;
+    private Integer code;
 
     @NonNull
     private String nom;
     @NonNull
-    private String prenom;
-    @NonNull
-    private String poste;
+    private LocalDate debut;
+
+    private LocalDate fin;
 
     @OneToMany
     @ToString.Exclude
     private List<Participation> participations = new LinkedList<>();
-
-    @OneToMany(mappedBy = "superieur")
-    private List<Personne> subordonnees = new LinkedList<>();
-
-    @ManyToOne
-    private Personne superieur;
-
 }
